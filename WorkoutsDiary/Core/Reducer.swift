@@ -13,18 +13,18 @@ func reducer(state: AppState, action: Action) -> AppState {
     
     switch action {
     case .addWorkout(let workout):
-        state.items.append(workout)
+        state.workouts.append(workout)
         
     case .removeWorkout(let indexSet):
-        state.items.remove(atOffsets: indexSet)
+        state.workouts.remove(atOffsets: indexSet)
     
     case .sort(let type):
         switch type {
         case .distance:
-            state.items.sort { $0.distance > $1.distance }
+            state.workouts.sort { $0.distance > $1.distance }
             state.sortType = .distance
         case .complexity:
-            state.items.sort { $0.complexity.rawValue > $1.complexity.rawValue }
+            state.workouts.sort { $0.complexity.rawValue > $1.complexity.rawValue }
             state.sortType = .complexity
         }
     }

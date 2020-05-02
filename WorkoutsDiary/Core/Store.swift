@@ -11,7 +11,7 @@
  final class Store: ObservableObject {
      @Published private(set) var state: AppState
      
-     init(state: AppState = .init(items: [Workout]())) {
+     init(state: AppState = .init(workouts: [Workout]())) {
          self.state = state
      }
      

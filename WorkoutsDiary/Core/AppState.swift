@@ -9,7 +9,7 @@
 import Foundation
 
 struct AppState {
-    var items: [Workout]
+    var workouts: [Workout]
     var sortType: SortType?
 }
 

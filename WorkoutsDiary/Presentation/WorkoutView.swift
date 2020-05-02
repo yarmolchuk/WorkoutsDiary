@@ -47,21 +47,3 @@ private extension WorkoutView {
         return dateFormatter.string(from: date)
     }
 }
-
-struct WorkoutView_Previews: PreviewProvider {
-    static var previews: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text("Workout #1")
-                Text("Distance:" + "100" + "km")
-                    .font(.subheadline)
-            }
-            Spacer()
-            VStack(alignment: .leading) {
-                Text("01.05.2020")
-            }
-        }
-        .padding()
-        .background(Color.blue)
-    }
-}

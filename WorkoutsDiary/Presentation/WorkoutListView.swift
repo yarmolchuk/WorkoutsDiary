@@ -13,7 +13,7 @@ struct WorkoutListView: View {
     
     var body: some View {
         List {
-            ForEach(store.state.items) {
+            ForEach(store.state.workouts) {
                 WorkoutView(workout: $0)
             }
             .onDelete {
